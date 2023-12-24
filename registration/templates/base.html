@@ -9,17 +9,13 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 		{% tailwind_css %}
 		{% load socialaccount %}
+    {% block css %}
+		{% endblock css %}
 	</head>
 		
 	<body class="bg-gray-50 font-serif leading-normal tracking-normal">
-		
 		<a href="{% provider_login_url 'google' %}?next=/">login with google</a>
-	<!-- 	<div class="container mx-auto">
-			<section class="flex items-center justify-center h-screen">
-				<h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-			</section>
-		</div> -->
-		{% block content %}
+    {% block content %}
 		{% endblock content %}
 		{% block script %}
 		{% endblock script %}
